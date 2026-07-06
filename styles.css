@@ -1,0 +1,998 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#141414;
+    color:white;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+header{
+
+    width:100%;
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+    background:#111;
+
+}
+
+nav{
+
+    width:90%;
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 0;
+
+}
+
+.logo{
+
+    font-size:2rem;
+    font-weight:700;
+
+    color:#00d4ff;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.logo:hover{
+
+    color:white;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+.nav-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:#00d4ff;
+
+}
+
+.nav-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.nav-right input{
+
+    padding:12px 18px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#222;
+
+    color:white;
+
+    outline:none;
+
+}
+
+.profile{
+
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.profile img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.profile:hover{
+
+    transform:scale(1.1);
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    height:95vh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding-left:8%;
+
+    background:
+    linear-gradient(to right,
+    rgba(0,0,0,.85),
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.2)),
+    url("images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.hero-overlay{
+
+    max-width:650px;
+
+    animation:fadeUp 1s ease;
+
+}
+
+.featured-tag{
+
+    display:inline-block;
+
+    background:#00d4ff;
+
+    color:black;
+
+    padding:8px 18px;
+
+    border-radius:25px;
+
+    margin-bottom:25px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+}
+
+.hero h1{
+
+    font-size:5rem;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+.hero-description{
+
+    color:#d5d5d5;
+
+    line-height:1.8;
+
+    font-size:1.1rem;
+
+    margin-bottom:35px;
+
+}
+
+.trip-stats{
+
+    display:flex;
+
+    gap:60px;
+
+    margin-bottom:40px;
+
+}
+
+.trip-stats h3{
+
+    font-size:2rem;
+
+    color:#00d4ff;
+
+}
+
+.trip-stats span{
+
+    color:#bbb;
+
+}
+
+/* ===========================
+   HERO BUTTONS
+=========================== */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.primary-btn{
+
+    background:#00d4ff;
+
+    color:black;
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:35px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 25px rgba(0,212,255,.4);
+
+}
+
+.secondary-btn{
+
+    background:transparent;
+
+    color:white;
+
+    border:2px solid white;
+
+    padding:15px 35px;
+
+    border-radius:35px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.secondary-btn:hover{
+
+    background:white;
+
+    color:black;
+
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ===========================
+   CONTINUE EXPLORING
+=========================== */
+
+.album-row{
+
+    padding:60px 5%;
+
+}
+
+.album-row h2{
+
+    font-size:2rem;
+
+    margin-bottom:30px;
+
+}
+
+.card-container{
+
+    display:flex;
+
+    gap:25px;
+
+    overflow-x:auto;
+
+    scrollbar-width:none;
+
+    scroll-behavior:smooth;
+
+}
+
+.card-container::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+/* ===========================
+   ALBUM CARD
+=========================== */
+
+.album-card{
+
+    min-width:300px;
+
+    background:#1b1b1b;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    position:relative;
+
+}
+
+.image-container{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.album-card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+/* ===========================
+   FAVORITE BUTTON
+=========================== */
+
+.favorite-btn{
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.85);
+
+    color:#ff4d6d;
+
+    font-size:1.2rem;
+
+    cursor:pointer;
+
+    z-index:20;
+
+    transition:.3s;
+
+}
+
+.favorite-btn:hover{
+
+    transform:scale(1.15);
+
+}
+
+/* ===========================
+   CARD OVERLAY
+=========================== */
+
+.card-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.view-btn{
+
+    padding:12px 28px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#00d4ff;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.view-btn:hover{
+
+    transform:scale(1.05);
+
+}
+
+.album-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.45);
+
+}
+
+.album-card:hover img{
+
+    transform:scale(1.12);
+
+}
+
+.album-card:hover .card-overlay{
+
+    opacity:1;
+
+}
+
+/* ===========================
+   CARD INFO
+=========================== */
+
+.card-info{
+
+    padding:20px;
+
+}
+
+.card-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:15px;
+
+}
+
+.card-title h3{
+
+    font-size:1.4rem;
+
+}
+
+.country{
+
+    color:#bdbdbd;
+
+    margin-bottom:15px;
+
+}
+
+.card-stats{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    color:#d4d4d4;
+
+    font-size:.95rem;
+
+}
+
+/* ===========================
+   FEATURED DESTINATIONS
+=========================== */
+
+.featured-destinations{
+
+    padding:70px 5%;
+
+}
+
+.featured-destinations h2{
+
+    font-size:2.2rem;
+
+    margin-bottom:35px;
+
+}
+
+.destination-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr;
+
+    grid-template-rows:250px 250px;
+
+    gap:20px;
+
+}
+
+.large-card{
+
+    grid-row:span 2;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+}
+
+.small-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+}
+
+.wide-card{
+
+    position:relative;
+
+    grid-column:span 2;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+}
+
+.large-card img,
+.small-card img,
+.wide-card img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+.large-card::after,
+.small-card::after,
+.wide-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(to top,
+    rgba(0,0,0,.75),
+    transparent);
+
+}
+
+.destination-info{
+
+    position:absolute;
+
+    bottom:20px;
+
+    left:20px;
+
+    z-index:10;
+
+}
+
+.destination-info h3{
+
+    font-size:1.8rem;
+
+    margin-bottom:5px;
+
+}
+
+.destination-info p{
+
+    color:#ddd;
+
+}
+
+.large-card:hover img,
+.small-card:hover img,
+.wide-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* ===========================
+   NEWSLETTER
+=========================== */
+
+.newsletter{
+
+    padding:80px 5%;
+
+    text-align:center;
+
+    background:#1b1b1b;
+
+    margin-top:60px;
+
+}
+
+.newsletter h2{
+
+    font-size:2.5rem;
+
+    margin-bottom:15px;
+
+}
+
+.newsletter p{
+
+    color:#bdbdbd;
+
+    margin-bottom:35px;
+
+    font-size:1.05rem;
+
+}
+
+.newsletter form{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.newsletter input{
+
+    width:350px;
+
+    padding:15px 20px;
+
+    border:none;
+
+    border-radius:40px;
+
+    outline:none;
+
+    background:#2b2b2b;
+
+    color:white;
+
+    font-size:1rem;
+
+}
+
+.newsletter button{
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#00d4ff;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.newsletter button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(0,212,255,.35);
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:50px;
+
+    flex-wrap:wrap;
+
+    padding:60px 8%;
+
+    background:#111;
+
+}
+
+.footer-left{
+
+    flex:2;
+
+}
+
+.footer-left h2{
+
+    color:#00d4ff;
+
+    margin-bottom:20px;
+
+    font-size:2rem;
+
+}
+
+.footer-left p{
+
+    color:#bdbdbd;
+
+    max-width:400px;
+
+    line-height:1.8;
+
+}
+
+.footer-links{
+
+    flex:1;
+
+}
+
+.footer-links h3{
+
+    margin-bottom:18px;
+
+}
+
+.footer-links ul{
+
+    list-style:none;
+
+}
+
+.footer-links li{
+
+    margin:12px 0;
+
+}
+
+.footer-links a{
+
+    color:#bdbdbd;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#00d4ff;
+
+    padding-left:5px;
+
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media(max-width:900px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .hero{
+
+        height:auto;
+
+        padding:100px 8%;
+
+    }
+
+    .hero h1{
+
+        font-size:3rem;
+
+    }
+
+    .trip-stats{
+
+        gap:30px;
+
+        flex-wrap:wrap;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .destination-grid{
+
+        display:flex;
+
+        flex-direction:column;
+
+    }
+
+    .large-card,
+    .small-card,
+    .wide-card{
+
+        height:250px;
+
+    }
+
+    footer{
+
+        flex-direction:column;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero h1{
+
+        font-size:2.3rem;
+
+    }
+
+    .newsletter input{
+
+        width:100%;
+
+    }
+
+    .newsletter button{
+
+        width:100%;
+
+    }
+
+    .trip-stats{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+}
