@@ -179,6 +179,8 @@ nav{
     background-size:cover;
 
     background-position:center;
+   
+    background-image: url(images/hero.jpg);
 
 }
 
@@ -222,7 +224,7 @@ nav{
 
 .hero-description{
 
-    color:#d5d5d5;
+    color:#544444;
 
     line-height:1.8;
 
